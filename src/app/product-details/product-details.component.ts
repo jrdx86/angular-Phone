@@ -23,4 +23,7 @@ export class ProductDetailsComponent implements OnInit {
     );
     //The route parameters correspond to the path variables you define in the route. To access the route parameters, we use route.snapshot, which is the ActivatedRouteSnapshot that contains information about the active route at that particular moment in time. The URL that matches the route provides the productId . Angular uses the productId to display the details for each unique product.
   }
+
+  volverHome(){
+    this.router.navigate(['']);//con esto podemos navegar a cualquier ruta
 }
