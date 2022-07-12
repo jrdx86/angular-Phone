@@ -1,1 +1,10 @@
-<p>cart works!</p>
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div> 
+
+<div style="text-align: center;">
+<button class="btn btn-primary" (click)="volverHome()">volver</button>
+</div>

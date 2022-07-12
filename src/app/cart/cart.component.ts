@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  items = this.cartService.getItems();
+  constructor(
+    private cartService: CartService,
+    private router: Router, 
+  ) { 
+    
+  }
 
   ngOnInit(): void {
   }
-
+  volverHome() {
+    this.router.navigate(['']); //con esto podemos navegar a cualquier ruta
+  }
 }
