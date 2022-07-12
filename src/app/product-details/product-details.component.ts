@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 
 import { Product, products } from '../products';
 
@@ -10,7 +10,7 @@ import { Product, products } from '../products';
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product | undefined;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router:Router) {}
 
   ngOnInit(): void {
     // First get the product id from the current route.
@@ -24,6 +24,7 @@ export class ProductDetailsComponent implements OnInit {
     //The route parameters correspond to the path variables you define in the route. To access the route parameters, we use route.snapshot, which is the ActivatedRouteSnapshot that contains information about the active route at that particular moment in time. The URL that matches the route provides the productId . Angular uses the productId to display the details for each unique product.
   }
 
-  volverHome(){
-    this.router.navigate(['']);//con esto podemos navegar a cualquier ruta
+  volverHome() {
+    this.router.navigate(['']); //con esto podemos navegar a cualquier ruta
+  }
 }
