@@ -1,14 +1,14 @@
 [
   {
-    "type": "Overnight",
+    "type": "Urgente",
     "price": 25.99
   },
   {
-    "type": "2-Day",
+    "type": "Normal",
     "price": 9.99
   },
   {
-    "type": "Postal",
+    "type": "Carta",
     "price": 2.99
   }
 ]
