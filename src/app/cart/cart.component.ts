@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
-import { ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-cart',
@@ -10,6 +11,7 @@ import { ActivatedRoute, Router} from '@angular/router';
 export class CartComponent implements OnInit {
 
   items = this.cartService.getItems();
+  
   constructor(
     private cartService: CartService,
     private router: Router, 
